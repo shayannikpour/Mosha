@@ -9,10 +9,12 @@ app.use(express.json());
 // Import routes
 const authRoutes = require('./routes/auth');
 const instructorRoutes = require('./routes/instructor');
+const bookingRoutes = require('./routes/booking');
 
 // Use routes
 app.use('/api/auth', authRoutes);
 app.use('/api/instructor', instructorRoutes);
+app.use('/api/booking', bookingRoutes);
 
 // Test route
 app.get('/', (req, res) => {
