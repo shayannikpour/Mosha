@@ -8,9 +8,11 @@ app.use(express.json());
 
 // Import routes
 const authRoutes = require('./routes/auth');
+const instructorRoutes = require('./routes/instructor');
 
 // Use routes
 app.use('/api/auth', authRoutes);
+app.use('/api/instructor', instructorRoutes);
 
 // Test route
 app.get('/', (req, res) => {
